@@ -1,0 +1,26 @@
+header {
+    background-color: var(--clr-content);
+    border-bottom: 1px solid var(--clr-text-main);
+    box-shadow: 0 3.2px 7.2px 0 rgb(0 0 0 / 13%), 0 0.6px 1.8px 0 rgb(0 0 0 / 11%);
+}
+
+nav {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > a {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+a > svg {
+    fill: var(--clr-text-main);
+}
+
+a > span {
+    font-weight: 700;
+    color: var(--clr-text-main);
+}
