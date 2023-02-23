@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+}
+
+.generate-button {
+    display: inline-block;
+    outline: transparent;
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.875em 1.5em;
+    border: transparent;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, rgba(66,165,245,1) 0%, rgba(33,150,243,1) 50%, rgba(30,136,229,1) 100%);
+    color: var(--clr-content);
+    width: 50%;
+    align-self: center;
+}
+
+.generate-button:is(:hover, :focus) {
+    filter: brightness(95%);
+}
+
+.generate-button:active {
+    transform: scaleX(0.5);
+}
