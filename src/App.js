@@ -1,12 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TopBar from "./componenets/TopBar";
 import Home from "./componenets/Home";
 import Saved from "./componenets/Saved";
 
 const App = () => {
 
-  const [saved, setSaved] = useState([]);
+  const [saved, setSaved] = useState(
+    JSON.parse(localStorage.getItem("saved")) ?? [],
+  );
+
   const addQuote = (quote) => {
     for (let i = 0; i < saved.length; i++) {
       if (saved[i]._id === quote._id) {
@@ -18,6 +21,10 @@ const App = () => {
   const removeQuote = (quote) => {
     setSaved(saved.filter(save => save._id !== quote._id));
   }
+
+  useEffect(() => {
+    localStorage.setItem("saved", JSON.stringify(saved));
+  }, [saved]);
 
   return(
     <BrowserRouter>
