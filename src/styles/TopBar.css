@@ -1,11 +1,11 @@
 header {
+    padding: 1rem 0;
     background-color: var(--clr-content);
     border-bottom: 1px solid var(--clr-text-main);
     box-shadow: 0 3.2px 7.2px 0 rgb(0 0 0 / 13%), 0 0.6px 1.8px 0 rgb(0 0 0 / 11%);
 }
 
 nav {
-    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
 }
