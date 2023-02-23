@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import TopBar from "./componenets/TopBar";
 import Home from "./componenets/Home";
+import Saved from "./componenets/Saved";
 
 const App = () => {
 
@@ -14,13 +15,16 @@ const App = () => {
     }
     setSaved(saved.concat(quote));
   }
-  
+  const removeQuote = (quote) => {
+    setSaved(saved.filter(save => save._id !== quote._id));
+  }
+
   return(
     <BrowserRouter>
       <TopBar />
       <Routes>
         <Route path="/" element={<Home addQuote={addQuote} />} />
-        {/* <Route path="/saved" element={<Saved />} /> */}
+        <Route path="/saved" element={<Saved saved={saved} removeQuote={removeQuote} />} />
       </Routes>
     </BrowserRouter>
   );
