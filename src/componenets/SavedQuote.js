@@ -1,5 +1,3 @@
-import "../styles/SavedQuote.css";
-
 const SavedQuote = ({ quote, removeQuote }) => {
 
     const handleClick = () => {
