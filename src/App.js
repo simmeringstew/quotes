@@ -30,8 +30,8 @@ const App = () => {
     <BrowserRouter>
       <TopBar />
       <Routes>
-        <Route path="/" element={<Home addQuote={addQuote} />} />
-        <Route path="/saved" element={<Saved saved={saved} removeQuote={removeQuote} />} />
+        <Route path="/quotes" element={<Home addQuote={addQuote} />} />
+        <Route path="/quotes/saved" element={<Saved saved={saved} removeQuote={removeQuote} />} />
       </Routes>
     </BrowserRouter>
   );
