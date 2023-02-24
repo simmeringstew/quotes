@@ -18,6 +18,7 @@ nav > a {
 
 a > svg {
     fill: var(--clr-text-main);
+    width: 1rem;
 }
 
 a > span {

@@ -35,10 +35,12 @@ article > button {
 
 .bi-save {
     fill: rgba(30,136,229,1);
+    width: 1rem;
 }
 
 .bi-trash3 {
     fill: #d50000;
+    width: 1rem;
 }
  
 .generate-button {
