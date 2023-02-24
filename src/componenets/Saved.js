@@ -3,7 +3,7 @@ import SavedQuote from "./SavedQuote";
 const Saved = ({ saved, removeQuote }) => {
     if (saved.length === 0) {
         return(
-            <h1>Looks like you have no saved quotes...</h1>
+            <h1 className="container">Looks like you have no saved quotes...</h1>
         );
     }
     return (
